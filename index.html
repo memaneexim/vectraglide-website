@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VectraGlide | Connected Mobility Systems</title>
+    <title>VectraGlide | Premium Connected Mobility Systems</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
@@ -11,19 +11,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=JetBrains+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <style>
-        #executive-switcher-nav {
-            opacity: 0;
-            pointer-events: none;
-            transform: translate(-50%, -30px);
-            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        #executive-switcher-nav.reveal-interface {
-            opacity: 1;
-            pointer-events: auto;
-            transform: translate(-50%, 0);
-        }
-    </style>
 </head>
 <body class="bg-[#09090b] text-white overflow-x-hidden font-sans antialiased">
 
@@ -56,25 +43,26 @@
 
     </section>
 
-    <div id="executive-switcher-nav" class="fixed top-6 left-1/2 z-50 w-[90%] max-w-4xl bg-[#080a0d]/80 backdrop-blur-xl px-6 py-3 rounded-full border border-white/5 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5)] flex justify-between items-center">
-        <a href="index.html" class="font-black text-xl tracking-wider text-white select-none decoration-none" style="font-family: 'Bebas Neue', sans-serif; letter-spacing: 1.5px;">
-            VECTRAGLIDE<span class="text-blue-600">.</span>
-        </a>
-        <div class="hidden lg:flex items-center gap-1.5 bg-[#0d1117] p-1 rounded-full border border-white/5">
-            <a href="index.html" class="px-5 py-2 text-[11px] font-mono tracking-wider rounded-full bg-blue-600 text-white shadow-lg">HOME</a>
-            <a href="products.html" class="px-5 py-2 text-[11px] font-mono tracking-wider rounded-full text-zinc-400 hover:text-white transition-all">PRODUCTS</a>
-            <a href="services.html" class="px-5 py-2 text-[11px] font-mono tracking-wider rounded-full text-zinc-400 hover:text-white transition-all">SERVICES</a>
-            <a href="careers.html" class="px-5 py-2 text-[11px] font-mono tracking-wider rounded-full text-zinc-400 hover:text-white transition-all">CAREERS</a>
-            <a href="contact.html" class="px-5 py-2 text-[11px] font-mono tracking-wider rounded-full text-zinc-400 hover:text-white transition-all">CONTACT</a>
-        </div>
-        <div>
-            <a href="https://wa.me/919999999999?text=Hello%20VectraGlide%20Team..." target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2 rounded-full text-xs font-bold tracking-wide transition-all duration-300 flex items-center gap-2">
-                WhatsApp Control
-            </a>
-        </div>
-    </div>
-
     <div id="main-website" class="relative z-30 min-h-screen bg-[#080a0d] border-t border-white/5 shadow-[0_-20px_50px_rgba(0,0,0,0.95)] rounded-t-[32px] transform translate-y-[30vh] opacity-0">
+        
+        <nav id="navbar" class="glass-nav sticky top-0 w-full z-50 px-6 md:px-12 py-5 flex justify-between items-center border-b border-white/5">
+            <a href="index.html" class="font-black text-2xl tracking-wider text-white select-none" style="font-family: 'Bebas Neue', sans-serif; letter-spacing: 1.5px;">
+                VECTRAGLIDE<span class="text-blue-600">.</span>
+            </a>
+            <div class="hidden lg:flex items-center gap-1.5 bg-[#0d1117] p-1 rounded-full border border-white/5">
+                <a href="index.html" class="px-5 py-2 text-[11px] font-mono tracking-wider rounded-full bg-blue-600 text-white shadow-lg">HOME</a>
+                <a href="products.html" class="px-5 py-2 text-[11px] font-mono tracking-wider rounded-full text-zinc-400 hover:text-white transition-all">PRODUCTS</a>
+                <a href="services.html" class="px-5 py-2 text-[11px] font-mono tracking-wider rounded-full text-zinc-400 hover:text-white transition-all">SERVICES</a>
+                <a href="careers.html" class="px-5 py-2 text-[11px] font-mono tracking-wider rounded-full text-zinc-400 hover:text-white transition-all">CAREERS</a>
+                <a href="contact.html" class="px-5 py-2 text-[11px] font-mono tracking-wider rounded-full text-zinc-400 hover:text-white transition-all">CONTACT</a>
+            </div>
+            <div>
+                <a href="https://wa.me/919999999999?text=Hello%20VectraGlide%20Team" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2.5 rounded-full text-xs font-bold tracking-wide transition-all duration-300 flex items-center gap-2 shadow-[0_0_15px_rgba(16,185,129,0.2)]">
+                    WhatsApp Contact
+                </a>
+            </div>
+        </nav>
+
         <section class="max-w-6xl mx-auto px-6 py-24" style="font-family: 'DM Sans', sans-serif;">
             <div class="text-6xl md:text-8xl font-black tracking-tighter text-white mb-8 leading-[0.95]" style="font-family: 'Bebas Neue', sans-serif; letter-spacing: -1px;">
                 MOVING THE FUTURE.<br><span class="text-blue-600">SUSTAINING TRUST.</span>
@@ -97,10 +85,29 @@
                     <div class="text-xl text-emerald-500 font-medium">Up to 40% Energy Reclaim</div>
                 </div>
             </div>
+
+            <div class="mt-20 bg-[#0d1117] border border-white/5 rounded-2xl p-8 md:p-12">
+                <div class="text-xs font-mono text-blue-500 uppercase tracking-widest mb-2">[ Industrial Trust Matrix ]</div>
+                <h3 class="text-3xl font-bold text-white mb-8" style="font-family: 'Bebas Neue', sans-serif; letter-spacing: 1px;">CORE STRUCTURAL ADVANTAGES</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="text-white font-medium text-lg mb-2">Multi-Level Redundancy</h4>
+                        <p class="text-zinc-400 text-sm font-light leading-relaxed">Dual mechanical safety brakes and real-time electronic sensory arrays monitor cabin acceleration to intercept anomalies instantly.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-medium text-lg mb-2">Gearless Permanent Drives</h4>
+                        <p class="text-zinc-400 text-sm font-light leading-relaxed">High-torque synchronization components eliminate old lubrication fluid overheads, operating in total silence with clean power draw curves.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-medium text-lg mb-2">Tricity Dispatch Network</h4>
+                        <p class="text-zinc-400 text-sm font-light leading-relaxed">Every client structure is backed by continuous hardware spare inventory support loops deployed natively within localized North India perimeters.</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <footer class="bg-[#080a0d] border-t border-white/5 py-12 px-6 text-center text-zinc-600 text-xs font-mono" style="font-family: 'JetBrains Mono', monospace;">
-            &copy; 2026 VectraGlide. All Rights Reserved. Demo Workspace Architecture.
+        <footer class="bg-[#080a0d] border-t border-white/5 py-16 px-6 text-center text-zinc-600 text-xs font-mono" style="font-family: 'JetBrains Mono', monospace;">
+            &copy; 2026 VectraGlide. All Rights Reserved. Interactive Showdown Demo Workspace.
         </footer>
     </div>
 
