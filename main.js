@@ -48,7 +48,6 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 function initVectraTimeline() {
-    // Master sequential timeline with expansive scrolling depth (650vh style)
     const masterTl = gsap.timeline({
         scrollTrigger: {
             trigger: "#landing-gateway",
@@ -61,7 +60,7 @@ function initVectraTimeline() {
         }
     });
 
-    // 1. Play out the complete 96-frame layout setup
+    // 1. Play out the complete 96-frame scroll trajectory
     masterTl.to(elevatorState, {
         frame: frameCount - 1,
         snap: "frame",
@@ -69,14 +68,14 @@ function initVectraTimeline() {
         duration: 4
     }, 0);
 
-    // 2. TIMING SEQUENCE: Phase 1 Out (0% to 15% range)
+    // 2. TIMING SEQUENCE: Phase 1 Out (0 to 0.15 / 0.20 scale match)
     masterTl.to("#phase-intro", {
         opacity: 0,
-        y: -40,
+        y: -50,
         duration: 0.6
     }, 0.6);
 
-    // 3. TIMING SEQUENCE: Phase 2 In & Out (22% to 58% range)
+    // 3. TIMING SEQUENCE: Phase 2 In & Out (0.22 to 0.58 range mapping)
     masterTl.to("#phase-punch", {
         opacity: 1,
         scale: 1,
@@ -84,18 +83,18 @@ function initVectraTimeline() {
     }, 1.2)
     .to("#phase-punch", {
         opacity: 0,
-        y: -30,
+        y: -40,
         duration: 0.6
     }, 2.4);
 
-    // 4. TIMING SEQUENCE: Phase 3 In (70% arrival point)
+    // 4. TIMING SEQUENCE: Phase 3 In (0.70 arrival threshold trigger)
     masterTl.to("#phase-arrival", {
         opacity: 1,
         scale: 1,
         duration: 0.6
     }, 3.0);
 
-    // 5. TIMING SEQUENCE: Dashboard curtain slides up completely (75% to 85% window setup)
+    // 5. TIMING SEQUENCE: Dashboard container transitions up over background (0.75 to 0.85 scale match)
     masterTl.to("#main-website", {
         opacity: 1,
         y: 0,
