@@ -3,23 +3,18 @@ gsap.registerPlugin(ScrollTrigger);
 const canvas = document.getElementById("elevator-canvas");
 const context = canvas.getContext("2d");
 
-// Screen ke full size ke hisab se canvas default dimensions set karein
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 const frameCount = 96;
-
-// FIXED PATH: Assets folder aur 3-digit name string template (001, 002...096)
 const currentFrame = index => (
     `assets/ezgif-frame-${(index + 1).toString().padStart(3, '0')}.webp`
 );
 
 const images = [];
 const elevatorState = { frame: 0 };
-
 let imagesLoaded = 0;
 
-// Preloading images to prevent flickering on scroll
 for (let i = 0; i < frameCount; i++) {
     const img = new Image();
     img.src = currentFrame(i);
@@ -37,7 +32,6 @@ function render() {
     const img = images[elevatorState.frame];
     
     if (img && img.complete) {
-        // Aspect Ratio maintaining responsive cover calculation
         const hRatio = canvas.width / img.width;
         const vRatio = canvas.height / img.height;
         const ratio = Math.max(hRatio, vRatio);
@@ -54,51 +48,62 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 function initVectraTimeline() {
-    // Master timeline to tie image sequence and layout slide-up together
+    // Master sequential timeline with expansive scrolling depth (650vh style)
     const masterTl = gsap.timeline({
         scrollTrigger: {
             trigger: "#landing-gateway",
             start: "top top",
-            end: "+=300%", // Scroll depth for full cinematic playback
-            scrub: 1.0,    // High response silky smooth sync
-            pin: true,     // Pin structural elements
+            end: "+=550%", 
+            scrub: 1.0,    
+            pin: true,     
             invalidateOnRefresh: true,
-            onUpdate: render // Keeps redrawing frames on scroll updates
+            onUpdate: render 
         }
     });
 
-    // 1. Scrub through the 96 WebP Elevator Images smoothly
+    // 1. Play out the complete 96-frame layout setup
     masterTl.to(elevatorState, {
         frame: frameCount - 1,
         snap: "frame",
         ease: "none",
-        duration: 2
+        duration: 4
     }, 0);
 
-    // 2. Stagger and fade away the main VECTRAGLIDE hero texts
-    masterTl.to("#hero-title", {
-        opacity: 0,
-        y: -80,
-        scale: 0.95,
-        duration: 0.8
-    }, 0);
-
-    masterTl.to("#hero-tagline", {
+    // 2. TIMING SEQUENCE: Phase 1 Out (0% to 15% range)
+    masterTl.to("#phase-intro", {
         opacity: 0,
         y: -40,
         duration: 0.6
-    }, 0);
+    }, 0.6);
 
-    // 3. Smoothly drag up the multi-page framework layer as the lift hits terminal floor
+    // 3. TIMING SEQUENCE: Phase 2 In & Out (22% to 58% range)
+    masterTl.to("#phase-punch", {
+        opacity: 1,
+        scale: 1,
+        duration: 0.6
+    }, 1.2)
+    .to("#phase-punch", {
+        opacity: 0,
+        y: -30,
+        duration: 0.6
+    }, 2.4);
+
+    // 4. TIMING SEQUENCE: Phase 3 In (70% arrival point)
+    masterTl.to("#phase-arrival", {
+        opacity: 1,
+        scale: 1,
+        duration: 0.6
+    }, 3.0);
+
+    // 5. TIMING SEQUENCE: Dashboard curtain slides up completely (75% to 85% window setup)
     masterTl.to("#main-website", {
         opacity: 1,
         y: 0,
-        duration: 1.2,
+        duration: 1.0,
         ease: "power2.out"
-    }, 1.1); // Slides up perfectly right in sequence
+    }, 3.4);
 }
 
-// Keep canvas layout fully responsive across monitors on resize
 window.addEventListener("resize", () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
