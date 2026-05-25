@@ -9,7 +9,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;900&family=Bebas+Neue&family=JetBrains+Mono&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-[#09090b] text-white overflow-x-hidden font-sans antialiased">
@@ -21,7 +21,7 @@
     <section id="landing-gateway" class="relative w-full h-screen flex items-center justify-center z-20 pointer-events-none">
         
         <div id="phase-intro" class="absolute text-center select-none pointer-events-auto tracking-wide">
-            <p class="text-xs uppercase tracking-[0.4em] text-zinc-400 mb-4 font-light uppercase">Welcome To</p>
+            <p class="text-xs uppercase tracking-[0.4em] text-zinc-400 mb-4 font-light">Welcome To</p>
             <h1 class="text-5xl md:text-7xl font-light uppercase tracking-[0.25em] flex gap-2 justify-center items-center">
                 <span class="lightsaber-core-white">VECTRA</span>
                 <span class="lightsaber-core-blue">GLIDE</span>
@@ -43,39 +43,215 @@
 
     </section>
 
-    <div id="main-website" class="relative z-30 min-h-screen bg-[#0e0e12] border-t border-white/5 shadow-[0_-20px_50px_rgba(0,0,0,0.9)] rounded-t-[32px] transform translate-y-[30vh] opacity-0">
+    <div id="main-website" class="relative z-30 min-h-screen bg-[#080a0d] border-t border-white/5 shadow-[0_-20px_50px_rgba(0,0,0,0.95)] rounded-t-[32px] transform translate-y-[30vh] opacity-0">
         
-        <nav class="sticky top-0 w-full glass-nav border-b border-white/10 z-50 px-6 md:px-12 py-5 flex justify-between items-center">
-            <div class="font-black text-xl tracking-wider text-white">
-                <a href="index.html">VECTRAGLIDE<span class="text-orange-500">.</span></a>
+        <nav id="navbar" class="glass-nav sticky top-0 w-full z-50 px-6 md:px-12 py-5 flex justify-between items-center border-b border-white/5">
+            <div class="font-black text-2xl tracking-wider text-white font-mono" style="font-family: 'Bebas Neue', sans-serif; letter-spacing: 2px;">
+                VECTRAGLIDE<span class="text-blue-600">.</span>
             </div>
-            <div class="hidden md:flex space-x-10 text-sm font-medium text-gray-400">
-                <a href="index.html" class="text-white border-b border-orange-500 pb-1">Home</a>
-                <a href="about.html" class="hover:text-white transition-colors">About</a>
-                <a href="services.html" class="hover:text-white transition-colors">Services</a>
-                <a href="contact.html" class="hover:text-white transition-colors">Contact</a>
+            <div class="hidden md:flex space-x-10 text-sm font-medium text-gray-400" style="font-family: 'DM Sans', sans-serif;">
+                <a href="#solutions" class="text-white tracking-wider hover:text-blue-500 transition-colors">SYSTEMS</a>
+                <a href="#specs" class="hover:text-white tracking-wider transition-colors">TECHNOLOGY</a>
+                <a href="#amc" class="hover:text-white tracking-wider transition-colors">LIFECYCLE CONTRACTS</a>
             </div>
             <div>
-                <a href="contact.html" class="bg-white text-black px-5 py-2 rounded-full text-xs font-bold tracking-wide hover:bg-orange-500 hover:text-white transition-all duration-300">Get Started</a>
+                <a href="#contact" class="bg-white text-black px-6 py-2.5 rounded-full text-xs font-bold tracking-wide hover:bg-blue-600 hover:text-white transition-all duration-300" style="font-family: 'DM Sans', sans-serif;">Request Consultation →</a>
             </div>
         </nav>
 
-        <main class="max-w-6xl mx-auto px-6 py-24 space-y-32">
-            <section class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <section id="manifesto" class="max-w-6xl mx-auto px-6 py-28" style="font-family: 'DM Sans', sans-serif;">
+            <div class="text-6xl md:text-8xl font-black tracking-tighter text-white mb-8 leading-[0.95]" style="font-family: 'Bebas Neue', sans-serif; letter-spacing: -1px;">
+                MOVING THE FUTURE.<br><span class="text-blue-600">SUSTAINING TRUST.</span>
+            </div>
+            <p class="text-gray-400 text-xl font-light leading-relaxed max-w-3xl">
+                VectraGlide engineered systems set the benchmark for architectural vertical mobility across North India. From high-speed microprocessor-controlled passenger complexes to heavy-duty hydraulic industrial systems, we combine world-class mechanical safety with touch-screen smart control arrays.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 border-t border-white/10 pt-12">
                 <div>
-                    <span class="text-orange-500 text-xs font-bold uppercase tracking-widest">Premium Architecture</span>
-                    <h2 class="text-4xl md:text-5xl font-black tracking-tight mt-2 mb-6">
-                        Seamless Integration of Space & Motion.
-                    </h2>
-                    <p class="text-gray-400 leading-relaxed text-lg">
-                        Vectraglide delivers hyper-optimized asset engineering, fluid industrial logistics, and high-performance networks tailored specifically for forward-looking markets.
+                    <div class="text-blue-500 font-mono text-xs tracking-widest mb-2" style="font-family: 'JetBrains Mono', monospace;">[ SEGMENT FOCUS ]</div>
+                    <div class="text-xl text-gray-200 font-medium">Low to Mid-Rise Towers</div>
+                </div>
+                <div>
+                    <div class="text-blue-500 font-mono text-xs tracking-widest mb-2" style="font-family: 'JetBrains Mono', monospace;">[ BASE OF OPERATIONS ]</div>
+                    <div class="text-xl text-gray-200 font-medium">Panchkula / Chandigarh Tricity</div>
+                </div>
+                <div>
+                    <div class="text-blue-500 font-mono text-xs tracking-widest mb-2" style="font-family: 'JetBrains Mono', monospace;">[ EFFICIENCY RATING ]</div>
+                    <div class="text-xl text-green-500 font-medium">Up to 40% Power Reduction</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="solutions" class="bg-[#0d1117] border-t border-white/5 py-24 px-6">
+            <div class="max-w-6xl mx-auto" style="font-family: 'DM Sans', sans-serif;">
+                <div class="text-blue-500 font-mono text-xs tracking-widest mb-3" style="font-family: 'JetBrains Mono', monospace;">PRODUCT PORTFOLIO</div>
+                <div class="text-5xl font-black text-white mb-16 tracking-wide" style="font-family: 'Bebas Neue', sans-serif;">INTELLIGENT MOBILITY SYSTEMS</div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    
+                    <div class="bg-[#111620] border border-[#1e2530] p-10 rounded-2xl">
+                        <div class="text-3xl text-white mb-4 tracking-wide" style="font-family: 'Bebas Neue', sans-serif;">PASSENGER ELEVATORS</div>
+                        <p class="text-gray-400 font-light text-base leading-relaxed mb-6">
+                            High-traffic optimization utilizing advanced VVVF microprocessor logic for zero-jerk velocity transitions. Perfect for elite apartments, residential complexes, and luxury private villas.
+                        </p>
+                        <div class="text-xs text-blue-400 bg-blue-500/5 p-4 rounded-lg border-l-4 border-blue-600 font-mono" style="font-family: 'JetBrains Mono', monospace;">
+                            SPEED: Up to 2.5 m/s &bull; CAPACITY: 4 to 26 Passengers &bull; LAYOUT: Machine-Room-Less (MRL)
+                        </div>
+                    </div>
+
+                    <div class="bg-[#111620] border border-[#1e2530] p-10 rounded-2xl">
+                        <div class="text-3xl text-white mb-4 tracking-wide" style="font-family: 'Bebas Neue', sans-serif;">CAPSULE ELEVATORS</div>
+                        <p class="text-gray-400 font-light text-base leading-relaxed mb-6">
+                            Premium panoramic continuous-glass enclosures crafted for luxury commercial high-rises, boutique showrooms, corporate headquarters, and upscale hotel infrastructures.
+                        </p>
+                        <div class="text-xs text-blue-400 bg-blue-500/5 p-4 rounded-lg border-l-4 border-blue-600 font-mono" style="font-family: 'JetBrains Mono', monospace;">
+                            GLASS: 180° Curved Toughened &bull; LIGHTING: Customizable Ambient LED &bull; MOUNT: External Shaft
+                        </div>
+                    </div>
+
+                    <div class="bg-[#111620] border border-[#1e2530] p-10 rounded-2xl">
+                        <div class="text-3xl text-white mb-4 tracking-wide" style="font-family: 'Bebas Neue', sans-serif;">HOSPITAL ELEVATORS</div>
+                        <p class="text-gray-400 font-light text-base leading-relaxed mb-6">
+                            Extended-depth, wide-door emergency configurations engineered with absolute leveling accuracy for seamless, vibration-free medical bed and stretcher transfers.
+                        </p>
+                        <div class="text-xs text-blue-400 bg-blue-500/5 p-4 rounded-lg border-l-4 border-blue-600 font-mono" style="font-family: 'JetBrains Mono', monospace;">
+                            LEVELING: &lt; &plusmn;2mm Accuracy &bull; INTERIOR: Antibacterial Steel &bull; OVERRIDE: Emergency Priority
+                        </div>
+                    </div>
+
+                    <div class="bg-[#111620] border border-[#1e2530] p-10 rounded-2xl">
+                        <div class="text-3xl text-white mb-4 tracking-wide" style="font-family: 'Bebas Neue', sans-serif;">HYDRAULIC GOODS & FREIGHT LIFTS</div>
+                        <p class="text-gray-400 font-light text-base leading-relaxed mb-6">
+                            Heavy-duty material transport platforms designed to withstand punishing industrial loading environments, industrial manufacturing setups, and deep logistics warehouses.
+                        </p>
+                        <div class="text-xs text-blue-400 bg-blue-500/5 p-4 rounded-lg border-l-4 border-blue-600 font-mono" style="font-family: 'JetBrains Mono', monospace;">
+                            PAYLOAD: Up to 10 Tons &bull; SAFETY: Dual-Cylinder Valves &bull; FLOORING: Anti-Skid Ribbed Steel
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="specs" class="max-w-6xl mx-auto px-6 py-24" style="font-family: 'DM Sans', sans-serif;">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="md:col-span-1">
+                    <div class="text-blue-500 font-mono text-xs tracking-widest mb-3" style="font-family: 'JetBrains Mono', monospace;">CORE COMPLIANCE</div>
+                    <div class="text-5xl font-black text-white leading-tight mb-6" style="font-family: 'Bebas Neue', sans-serif;">ENGINEERED FOR ABSOLUTE SAFETY</div>
+                    <p class="text-gray-400 font-light leading-relaxed">
+                        Every VectraGlide asset passes severe structural testing thresholds, complying fully with state codes and national safety directives.
                     </p>
                 </div>
-                <div class="h-64 bg-white/5 rounded-2xl border border-white/10 p-6 flex items-center justify-center shadow-inner">
-                    <span class="text-gray-500 text-sm font-medium">Interactive System Dashboard Feature Panel</span>
+                <div class="md:col-span-2 flex flex-col justify-center space-y-10">
+                    <div class="border-b border-white/10 pb-6">
+                        <div class="text-xl text-gray-100 font-medium mb-2">Advanced Automatic Rescue Device (ARD)</div>
+                        <p class="text-gray-400 font-light text-sm">Intelligent battery-backed standby system that safely shifts cars to the nearest terminal and unlocks doors immediately upon power disruption.</p>
+                    </div>
+                    <div class="border-b border-white/10 pb-6">
+                        <div class="text-xl text-gray-100 font-medium mb-2">Statutory National Standards Adherence</div>
+                        <p class="text-gray-400 font-light text-sm">100% compliant with Bureau of Indian Standards mandates: <strong>IS 14665, IS 15785, and European EN 81-20 blueprints</strong>.</p>
+                    </div>
+                    <div>
+                        <div class="text-xl text-gray-100 font-medium mb-2">Smart Energy-Regenerative Control Drives</div>
+                        <p class="text-gray-400 font-light text-sm">Reclaims thermal kinetic energy generated during braking cycles, optimizing building electric loops by up to 40% efficiency gains.</p>
+                    </div>
                 </div>
-            </section>
-        </main>
+            </div>
+        </section>
+
+        <section id="amc" class="bg-[#0d1117] border-t border-white/5 py-24 px-6">
+            <div class="max-w-6xl mx-auto" style="font-family: 'DM Sans', sans-serif;">
+                <div class="text-center mb-16">
+                    <div class="text-blue-500 font-mono text-xs tracking-widest mb-3" style="font-family: 'JetBrains Mono', monospace;">SIGNATURE SERVICE BLUEPRINT</div>
+                    <div class="text-5xl font-black text-white" style="font-family: 'Bebas Neue', sans-serif;">ANNUAL LIFECYCLE MAINTENANCE</div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <div class="bg-[#111620] border border-[#1e2530] p-10 rounded-xl flex flex-col justify-between">
+                        <div class="mb-8">
+                            <div class="text-gray-500 font-mono text-[10px] mb-2" style="font-family: 'JetBrains Mono', monospace;">[ TIER 01 ]</div>
+                            <div class="text-2xl text-white mb-4" style="font-family: 'Bebas Neue', sans-serif;">PREVENTIVE SERVICE</div>
+                            <p class="text-gray-400 text-sm font-light leading-relaxed">Scheduled engineering visits focusing on dynamic mechanical realignments, micro-lubrication tracks, and rigorous safety chain analysis blocks.</p>
+                        </div>
+                        <div class="text-gray-300 text-xs font-mono border-t border-white/5 pt-4">Standard Protection Layer</div>
+                    </div>
+
+                    <div class="bg-[#111620] border border-blue-600 p-10 rounded-xl flex flex-col justify-between shadow-[0_10px_30px_rgba(42,108,246,0.15)]">
+                        <div class="mb-8">
+                            <div class="text-blue-500 font-mono text-[10px] mb-2" style="font-family: 'JetBrains Mono', monospace;">[ DEPLOYED STANDARD ]</div>
+                            <div class="text-2xl text-white mb-4" style="font-family: 'Bebas Neue', sans-serif;">COMPREHENSIVE COVERAGE</div>
+                            <p class="text-gray-400 text-sm font-light leading-relaxed">Full mechanical risk mitigation. Includes all preventive schedules backed with immediate inventory genuine replacement parts and 24/7 priority emergency dispatcher protocols.</p>
+                        </div>
+                        <div class="text-blue-500 text-xs font-bold border-t border-blue-500/20 pt-4">Most Requested Enterprise Plan</div>
+                    </div>
+
+                    <div class="bg-[#111620] border border-[#1e2530] p-10 rounded-xl flex flex-col justify-between">
+                        <div class="mb-8">
+                            <div class="text-gray-500 font-mono text-[10px] mb-2" style="font-family: 'JetBrains Mono', monospace;">[ TIER 03 ]</div>
+                            <div class="text-2xl text-white mb-4" style="font-family: 'Bebas Neue', sans-serif;">ABSOLUTE ELITE PRECISION</div>
+                            <p class="text-gray-400 text-sm font-light leading-relaxed">Zero-downtime infrastructure SLA framework. Guaranteed 4-hour on-site mechanical emergency intervention windows combined with absolute systemic customization controls.</p>
+                        </div>
+                        <div class="text-gray-300 text-xs font-mono border-t border-white/5 pt-4">High-Rise / Critical Care Support</div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="max-w-xl mx-auto px-6 py-24" style="font-family: 'DM Sans', sans-serif;">
+            <div class="text-center mb-12">
+                <div class="text-blue-500 font-mono text-xs tracking-widest mb-3" style="font-family: 'JetBrains Mono', monospace;">INTERACTION CHANNEL</div>
+                <div class="text-5xl font-black text-white" style="font-family: 'Bebas Neue', sans-serif;">REQUEST ENGINEERING AUDIT</div>
+            </div>
+
+            <form id="contactForm" class="space-y-6">
+                <div>
+                    <label class="block text-gray-400 text-xs font-mono mb-2" style="font-family: 'JetBrains Mono', monospace;">FULL NAME</label>
+                    <input type="text" required class="w-full bg-[#0d1117] border border-[#1e2530] p-4 rounded-lg text-white focus:outline-none focus:border-blue-500 transition-colors" />
+                </div>
+                <div>
+                    <label class="block text-gray-400 text-xs font-mono mb-2" style="font-family: 'JetBrains Mono', monospace;">BUILDING SPECIFICATION / CITY</label>
+                    <input type="text" required placeholder="e.g. Panchkula Apartment, 5 Floors" class="w-full bg-[#0d1117] border border-[#1e2530] p-4 rounded-lg text-white focus:outline-none focus:border-blue-500 transition-colors" />
+                </div>
+                <div>
+                    <label class="block text-gray-400 text-xs font-mono mb-2" style="font-family: 'JetBrains Mono', monospace;">REQUIRED CONFIGURATION</label>
+                    <select class="w-full bg-[#0d1117] border border-[#1e2530] p-4 rounded-lg text-white focus:outline-none focus:border-blue-500 transition-colors">
+                        <option>Passenger Mobility Elevator System</option>
+                        <option>Architectural Panoramic Capsule Elevator</option>
+                        <option>Vibration-Free Hospital Critical Care Lift</option>
+                        <option>Heavy Industrial Hydraulic Freight Platform</option>
+                    </select>
+                </div>
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-lg font-bold transition-colors text-sm uppercase tracking-wider mt-4">Submit Technical Request →</button>
+            </form>
+        </section>
+
+        <footer class="bg-[#080a0d] border-t border-white/5 py-16 px-6" style="font-family: 'DM Sans', sans-serif;">
+            <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start gap-10">
+                <div>
+                    <div class="text-2xl text-white mb-4 tracking-wider" style="font-family: 'Bebas Neue', sans-serif;">VECTRAGLIDE (OPC) PVT. LTD.</div>
+                    <p class="text-gray-400 text-sm font-light leading-relaxed max-w-md">
+                        Registered Engineering Headquarters:<br>
+                        VPO Mattanwala, National Highway 7, Kot, Panchkula, Haryana — 134118.<br><br>
+                        Serving: Chandigarh, Panchkula, Mohali, Zirakpur, and North India Enterprise Circuits.
+                    </p>
+                </div>
+                <div>
+                    <div class="text-blue-500 font-mono text-xs tracking-widest mb-4" style="font-family: 'JetBrains Mono', monospace;">STANDARDS</div>
+                    <div class="text-gray-400 text-sm flex flex-col space-y-2">
+                        <span>IS 14665 Code Compliance</span>
+                        <span>IS 15785 Code Compliance</span>
+                        <span>EN 81-20 Platform Framework</span>
+                    </div>
+                </div>
+            </div>
+            <div class="max-w-6xl mx-auto border-t border-white/5 mt-12 pt-6 flex flex-col md:flex-row justify-between text-gray-500 text-xs font-mono" style="font-family: 'JetBrains Mono', monospace;">
+                <span>&copy; 2026 VectraGlide. All Rights Reserved.</span>
+                <span>Engineered Authority Ecosystem.</span>
+            </div>
+        </footer>
     </div>
 
     <script src="main.js"></script>
