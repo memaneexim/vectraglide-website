@@ -229,7 +229,7 @@
         </section>
 
         <footer class="bg-[#080a0d] border-t border-white/5 py-16 px-6" style="font-family: 'DM Sans', sans-serif;">
-            <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start gap-10">
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
                 <div>
                     <div class="text-2xl text-white mb-4 tracking-wider" style="font-family: 'Bebas Neue', sans-serif;">VECTRAGLIDE (OPC) PVT. LTD.</div>
                     <p class="text-gray-400 text-sm font-light leading-relaxed max-w-md">
@@ -239,11 +239,25 @@
                     </p>
                 </div>
                 <div>
-                    <div class="text-blue-500 font-mono text-xs tracking-widest mb-4" style="font-family: 'JetBrains Mono', monospace;">STANDARDS</div>
+                    <div class="text-blue-500 font-mono text-xs tracking-widest mb-4" style="font-family: 'JetBrains Mono', monospace;">STANDARDS & LEGAL</div>
                     <div class="text-gray-400 text-sm flex flex-col space-y-2">
                         <span>IS 14665 Code Compliance</span>
                         <span>IS 15785 Code Compliance</span>
                         <span>EN 81-20 Platform Framework</span>
+                        <a href="#privacy" class="hover:text-blue-500 transition-colors mt-2 text-xs border-t border-white/5 pt-2">[ Privacy Policy ]</a>
+                        <a href="#terms" class="hover:text-blue-500 transition-colors text-xs">[ Terms of Service ]</a>
+                    </div>
+                </div>
+                <div class="flex flex-col justify-start items-start md:items-end">
+                    <div class="text-blue-500 font-mono text-xs tracking-widest mb-3" style="font-family: 'JetBrains Mono', monospace;">SYSTEM TELEMETRY</div>
+                    <div class="bg-[#0d1117] border border-[#1e2530] p-4 rounded-xl text-left md:text-right min-w-[200px]">
+                        <div class="text-[10px] text-gray-500 font-mono mb-1">TOTAL VERIFIED VISITORS</div>
+                        <div class="text-2xl font-mono text-white tracking-widest font-bold" style="font-family: 'JetBrains Mono', monospace;">
+                            00<span id="visitor-count" class="text-blue-500 animate-pulse">48,291</span>
+                        </div>
+                        <div class="text-[9px] text-green-500 font-mono mt-1 flex items-center gap-1 justify-start md:justify-end">
+                            <span class="inline-block w-1.5 h-1.5 rounded-full bg-green-500"></span> Live Node Active
+                        </div>
                     </div>
                 </div>
             </div>
