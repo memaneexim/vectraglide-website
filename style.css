@@ -1,11 +1,12 @@
 /* ==========================================================================
-   VECTRAGLIDE PREMIUM GLOBAL STYLESHEET
+   VECTRAGLIDE LUXURY TECH STYLESHEET
    ========================================================================== */
 
-/* Clean, modern scroll behavior configuration */
-html {
+/* Apply crisp geometric typography family globally */
+html, body {
     scroll-behavior: smooth;
     background-color: #09090b;
+    font-family: 'Inter', sans-serif !important;
 }
 
 /* Custom premium dark minimal scrollbar layout */
@@ -20,60 +21,54 @@ html {
     border-radius: 10px;
     border: 2px solid #09090b;
 }
-::-webkit-scrollbar-thumb:hover {
-    background: #2563eb; /* Blue highlight transition on scroll hover */
-}
 
-/* Selection tint update */
 ::selection {
-    background: #1e3a8a;
+    background: #1d4ed8;
     color: #ffffff;
 }
 
 /* ==========================================================================
-   NEON GLOW EFFECTS DEFINITIONS (White & Faint Blue Matrix)
+   SHARP LIGHTSABER GLOW UTILITIES (High-Intensity Energy Aura)
    ========================================================================== */
 
-/* Phase 1 & 3: VECTRAGLIDE and LET'S GLIDE Main White Typography Shine */
-.neon-white-shine {
-    color: #ffffff;
-    font-weight: 900;
+/* VECTRAGLIDE White Sabre - Intensely sharp pure white core with heavy white neon emission */
+.lightsaber-core-white {
+    color: #ffffff !important;
+    letter-spacing: 0.25em;
     text-shadow: 
-        0 0 4px rgba(255, 255, 255, 0.9), 
-        0 0 10px rgba(255, 255, 255, 0.7), 
-        0 0 25px rgba(255, 255, 255, 0.5), 
-        0 0 50px rgba(255, 255, 255, 0.3);
+        0 0 2px #ffffff,
+        0 0 8px rgba(255, 255, 255, 0.8),
+        0 0 15px rgba(255, 255, 255, 0.6),
+        0 0 30px rgba(255, 255, 255, 0.3);
 }
 
-/* Phase 1 & 3: GLIDE Blue-900 Core with Soft/Faint Neon Aura Layer */
-.neon-blue-faint {
-    color: #1e3a8a; /* Pure deep dynamic Blue-900 look */
-    font-weight: 900;
+/* GLIDE Faint Blue Sabre - Pure energetic high-voltage beam style edge bleeding */
+.lightsaber-core-blue {
+    color: #3b82f6 !important; /* Shifting to dynamic crisp energy blue */
+    letter-spacing: 0.25em;
     text-shadow: 
-        0 0 4px #1d4ed8, 
-        0 0 15px rgba(30, 58, 138, 0.6), 
-        0 0 35px rgba(29, 78, 216, 0.3);
+        0 0 2px #ffffff,            /* High energy white central core */
+        0 0 6px #2563eb,            /* Intermediate tight blue emission */
+        0 0 18px rgba(37, 99, 235, 0.7),
+        0 0 35px rgba(29, 78, 216, 0.4);
 }
 
 /* ==========================================================================
-   LAYOUT STRUCTURES & GLASSMORPHISM PIPELINE
+   LAYOUT STRUCTURES & GLASSMORPHISM
    ========================================================================== */
 
-/* High-end backdrop blur for the sticky multi-page navbar overlay */
 .glass-nav {
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     background: rgba(14, 14, 18, 0.75);
 }
 
-/* Optimize smooth text rendering across major display rendering stacks */
 #landing-gateway h1, 
 #landing-gateway h2, 
 #landing-gateway p {
     will-change: transform, opacity;
 }
 
-/* Canvas alignment correction fallback to avoid scaling edge leaks */
 #elevator-canvas {
     display: block;
     image-rendering: -webkit-optimize-contrast;
