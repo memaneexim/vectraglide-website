@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vectraglide | Premium Motion & Logistics</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#0b0b0f] text-white overflow-x-hidden font-sans antialiased">
+
+    <div class="fixed top-0 left-0 w-full h-screen z-10 pointer-events-none flex items-center justify-center">
+        <div id="3d-lift-placeholder" class="w-full h-full bg-gradient-to-b from-transparent to-[#0b0b0f]/50 flex items-center justify-center">
+            <div id="lift-mesh" class="w-64 h-96 bg-gradient-to-tr from-amber-500 to-orange-600 rounded-xl shadow-2xl border border-white/10 flex items-center justify-center">
+                <span class="text-xs uppercase tracking-widest font-bold opacity-60">3D Lift Container</span>
+            </div>
+        </div>
+    </div>
+
+    <section id="landing-gateway" class="relative w-full h-screen flex items-center justify-center z-20 pointer-events-none">
+        <div class="text-center select-none pointer-events-auto">
+            <h1 id="hero-title" class="text-6xl md:text-8xl font-black tracking-tighter bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-400">
+                VECTRAGLIDE
+            </h1>
+            <p id="hero-tagline" class="text-gray-400 mt-4 tracking-widest text-xs uppercase">
+                Scroll to Unlock the Experience
+            </p>
+        </div>
+    </section>
+
+    <div id="main-website" class="relative z-30 min-h-screen bg-[#0e0e12] border-t border-white/5 shadow-[0_-20px_50px_rgba(0,0,0,0.8)] rounded-t-[32px] transform translate-y-[20vh] opacity-0">
+        
+        <nav class="sticky top-0 w-full glass-nav border-b border-white/10 z-50 px-6 md:px-12 py-5 flex justify-between items-center">
+            <div class="font-black text-xl tracking-wider text-white">
+                <a href="index.html">VECTRAGLIDE<span class="text-orange-500">.</span></a>
+            </div>
+            <div class="hidden md:flex space-x-10 text-sm font-medium text-gray-400">
+                <a href="index.html" class="text-white border-b border-orange-500 pb-1">Home</a>
+                <a href="about.html" class="hover:text-white transition-colors">About</a>
+                <a href="services.html" class="hover:text-white transition-colors">Services</a>
+                <a href="contact.html" class="hover:text-white transition-colors">Contact</a>
+            </div>
+            <div>
+                <a href="contact.html" class="bg-white text-black px-5 py-2 rounded-full text-xs font-bold tracking-wide hover:bg-orange-500 hover:text-white transition-all duration-300">Get Started</a>
+            </div>
+        </nav>
+
+        <main class="max-w-6xl mx-auto px-6 py-24 space-y-32">
+            <section class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-orange-500 text-xs font-bold uppercase tracking-widest">Premium Architecture</span>
+                    <h2 class="text-4xl md:text-5xl font-black tracking-tight mt-2 mb-6">
+                        Seamless Integration of Space & Motion.
+                    </h2>
+                    <p class="text-gray-400 leading-relaxed">
+                        Vectraglide delivers hyper-optimized asset engineering, fluid industrial logistics, and high-performance networks tailored specifically for forward-looking markets.
+                    </p>
+                </div>
+                <div class="h-64 bg-white/5 rounded-2xl border border-white/10 p-6 flex items-center justify-center">
+                    <span class="text-gray-500 text-sm">Interactive System Dashboard Feature Panel</span>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

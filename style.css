@@ -1,0 +1,32 @@
+/* Custom smooth interactions and premium dark styles */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom minimal scrollbar for a premium look */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #0b0b0f;
+}
+::-webkit-scrollbar-thumb {
+    background: #22212a;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #ea580c; /* Orange accent on hover */
+}
+
+/* Glassmorphism utility */
+.glass-nav {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: rgba(14, 14, 18, 0.75);
+}
+
+/* Custom text selection styling */
+::selection {
+    background: #ea580c;
+    color: #fff;
+}
