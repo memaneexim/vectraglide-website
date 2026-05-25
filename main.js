@@ -1,117 +1,106 @@
 gsap.registerPlugin(ScrollTrigger);
 
-let scene, camera, renderer, liftMesh;
+const canvas = document.getElementById("elevator-canvas");
+const context = canvas.getContext("2d");
 
-window.addEventListener('DOMContentLoaded', () => {
-    init3DScene();
-    initScrollEngine();
-});
+// Screen ke full size ke hisab se canvas default dimensions set karein
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
-// 1. Initialize Real Three.js 3D Space
-function init3DScene() {
-    const canvas = document.querySelector('#flow-lift-canvas');
-    scene = new THREE.Scene();
+const frameCount = 96;
 
-    // Camera setup
-    camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 100);
-    camera.position.z = 6;
+// FIXED PATH: Assets folder aur 3-digit name string template (001, 002...096)
+const currentFrame = index => (
+    `assets/ezgif-frame-${(index + 1).toString().padStart(3, '0')}.webp`
+);
 
-    // Renderer setup with premium antialiasing
-    renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+const images = [];
+const elevatorState = { frame: 0 };
 
-    // Create a Premium Geometric Lift Structure (Aerodynamic Cyber Pillar)
-    const geometry = new THREE.CylinderGeometry(0.6, 0.8, 2.5, 4, 1);
-    
-    // Premium Metallic Material (Gold/Orange Reflective Tint)
-    const material = new THREE.MeshStandardMaterial({
-        color: 0xea580c, 
-        metalness: 0.9,
-        roughness: 0.15,
-        wireframe: false
-    });
+let imagesLoaded = 0;
 
-    liftMesh = new THREE.Mesh(geometry, material);
-    scene.add(liftMesh);
-
-    // Advanced Studio Lighting for Premium Look
-    const mainLight = new THREE.DirectionalLight(0xffffff, 2.5);
-    mainLight.position.set(2, 4, 5);
-    scene.add(mainLight);
-
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
-    scene.add(ambientLight);
-
-    // Constant smooth background rotation micro-interaction
-    function tick() {
-        if (!ScrollTrigger.isInViewport("#landing-gateway")) {
-            // Keep subtle rotation when idle
-            liftMesh.rotation.y += 0.005;
+// Preloading images to prevent flickering on scroll
+for (let i = 0; i < frameCount; i++) {
+    const img = new Image();
+    img.src = currentFrame(i);
+    img.onload = () => {
+        imagesLoaded++;
+        if (imagesLoaded === 1) {
+            render();
         }
-        renderer.render(scene, camera);
-        window.requestAnimationFrame(tick);
-    }
-    tick();
+    };
+    images.push(img);
 }
 
-// 2. Control 3D Asset Transitions via GSAP ScrollTrigger
-function initScrollEngine() {
+function render() {
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    const img = images[elevatorState.frame];
+    
+    if (img && img.complete) {
+        // Aspect Ratio maintaining responsive cover calculation
+        const hRatio = canvas.width / img.width;
+        const vRatio = canvas.height / img.height;
+        const ratio = Math.max(hRatio, vRatio);
+        const centerShift_x = (canvas.width - img.width * ratio) / 2;
+        const centerShift_y = (canvas.height - img.height * ratio) / 2;
+        
+        context.drawImage(img, 0, 0, img.width, img.height,
+                               centerShift_x, centerShift_y, img.width * ratio, img.height * ratio);
+    }
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    initVectraTimeline();
+});
+
+function initVectraTimeline() {
+    // Master timeline to tie image sequence and layout slide-up together
     const masterTl = gsap.timeline({
         scrollTrigger: {
             trigger: "#landing-gateway",
             start: "top top",
-            end: "bottom top",
-            scrub: 1.2, // Adds cinematic weight to the scroll
-            pin: true,
-            invalidateOnRefresh: true
+            end: "+=300%", // Scroll depth for full cinematic playback
+            scrub: 1.0,    // High response silky smooth sync
+            pin: true,     // Pin structural elements
+            invalidateOnRefresh: true,
+            onUpdate: render // Keeps redrawing frames on scroll updates
         }
     });
 
-    // Fade out text layer beautifully
+    // 1. Scrub through the 96 WebP Elevator Images smoothly
+    masterTl.to(elevatorState, {
+        frame: frameCount - 1,
+        snap: "frame",
+        ease: "none",
+        duration: 2
+    }, 0);
+
+    // 2. Stagger and fade away the main VECTRAGLIDE hero texts
     masterTl.to("#hero-title", {
         opacity: 0,
-        y: -60,
+        y: -80,
         scale: 0.95,
-        duration: 1
+        duration: 0.8
     }, 0);
 
     masterTl.to("#hero-tagline", {
         opacity: 0,
-        y: -30,
-        duration: 0.8
+        y: -40,
+        duration: 0.6
     }, 0);
 
-    // Dynamic 3D Lift rotation and reposition on Scroll
-    if (liftMesh) {
-        masterTl.to(liftMesh.rotation, {
-            x: 0.5,
-            y: 3.14 * 1.5, // 270 degree turn
-            z: 0.2,
-            duration: 1.5
-        }, 0);
-
-        masterTl.to(liftMesh.position, {
-            y: 0.5,
-            z: -2, // Push it slightly deep into space
-            duration: 1.5
-        }, 0);
-    }
-
-    // Slide up the full dark dashboard layout from the fold
+    // 3. Smoothly drag up the multi-page framework layer as the lift hits terminal floor
     masterTl.to("#main-website", {
         opacity: 1,
         y: 0,
-        duration: 1.5,
+        duration: 1.2,
         ease: "power2.out"
-    }, 0.2);
+    }, 1.1); // Slides up perfectly right in sequence
 }
 
-// Handle Window Resizing smoothly
-window.addEventListener('resize', () => {
-    if (camera && renderer) {
-        camera.aspect = window.innerWidth / window.innerHeight;
-        camera.updateProjectionMatrix();
-        renderer.setSize(window.innerWidth, window.innerHeight);
-    }
+// Keep canvas layout fully responsive across monitors on resize
+window.addEventListener("resize", () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    render();
 });
