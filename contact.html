@@ -3,52 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | VectraGlide</title>
+    <title>Contact Control | VectraGlide</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=JetBrains+Mono&family=DM+Sans:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-[#080a0d] text-white font-sans antialiased">
+<body class="bg-[#080a0d] text-white font-sans antialiased pt-24">
 
-    <div class="w-[90%] max-w-4xl mx-auto mt-6 bg-[#0d1117]/90 backdrop-blur-xl px-6 py-3 rounded-full border border-white/5 flex justify-between items-center shadow-xl">
+    <div class="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-4xl bg-[#080a0d]/90 backdrop-blur-xl px-6 py-3 rounded-full border border-white/5 flex justify-between items-center shadow-2xl">
         <a href="index.html" class="font-black text-xl tracking-wider text-white" style="font-family: 'Bebas Neue', sans-serif;">VECTRAGLIDE<span class="text-blue-600">.</span></a>
-        <div class="hidden lg:flex items-center gap-1.5 bg-[#09090b] p-1 rounded-full border border-white/5">
+        <div class="hidden lg:flex items-center gap-1.5 bg-[#0d1117] p-1 rounded-full border border-white/5">
             <a href="index.html" class="px-5 py-2 text-[11px] font-mono tracking-wider rounded-full text-zinc-400">HOME</a>
             <a href="products.html" class="px-5 py-2 text-[11px] font-mono tracking-wider rounded-full text-zinc-400">PRODUCTS</a>
             <a href="services.html" class="px-5 py-2 text-[11px] font-mono tracking-wider rounded-full text-zinc-400">SERVICES</a>
             <a href="careers.html" class="px-5 py-2 text-[11px] font-mono tracking-wider rounded-full text-zinc-400">CAREERS</a>
-            <a href="contact.html" class="px-5 py-2 text-[11px] font-mono tracking-wider rounded-full bg-blue-600 text-white">CONTACT</a>
+            <a href="contact.html" class="px-5 py-2 text-[11px] font-mono tracking-wider rounded-full bg-blue-600 text-white shadow-md">CONTACT</a>
         </div>
-        <a href="https://wa.me/919999999999" class="bg-emerald-600 text-white px-4 py-2 rounded-full text-xs font-bold">WhatsApp</a>
+        <a href="https://wa.me/919999999999" target="_blank" class="bg-emerald-600 text-white px-4 py-2 rounded-full text-xs font-bold">WhatsApp</a>
     </div>
 
-    <section class="max-w-xl mx-auto px-6 py-20" style="font-family: 'DM Sans', sans-serif;">
+    <section class="max-w-xl mx-auto px-6 py-12" style="font-family: 'DM Sans', sans-serif;">
         <div class="text-center mb-12">
             <div class="text-blue-500 font-mono text-xs tracking-widest mb-3" style="font-family: 'JetBrains Mono', monospace;">DISPATCH CONTROL DESK</div>
             <div class="text-5xl font-black text-white" style="font-family: 'Bebas Neue', sans-serif;">REQUEST MECHANICAL AUDIT LOG</div>
         </div>
 
-        <form id="contactForm" onsubmit="event.preventDefault(); alert('Demo Space Alert: In production, this data maps through Resend API straight to secure email relays.')" class="space-y-6">
+        <form id="contactForm" onsubmit="event.preventDefault(); alert('Demo Space Alert: In production, this data immediately maps through Resend API straight to secure mail relays.')" class="space-y-6">
             <div>
                 <label class="block text-gray-400 text-xs font-mono mb-2" style="font-family: 'JetBrains Mono', monospace;">AUTHORIZED REPRESENTATIVE / FULL NAME</label>
-                <input type="text" required placeholder="e.g. John Doe" class="w-full bg-[#0d1117] border border-[#1e2530] p-4 rounded-lg text-white focus:outline-none focus:border-blue-500 transition-colors" />
+                <input type="text" required placeholder="e.g. John Doe" class="w-full bg-[#0d1117] border border-[#1e2530] p-4 rounded-lg text-white focus:outline-none focus:border-blue-500 transition-colors placeholder-zinc-700" />
             </div>
             <div>
-                <label class="block text-gray-400 text-xs font-mono mb-2" style="font-family: 'JetBrains Mono', monospace;">BUILDING PROFILE / TARGET CITY</label>
-                <input type="text" required placeholder="e.g. 5-Floor Apartment Complex, Mohali" class="w-full bg-[#0d1117] border border-[#1e2530] p-4 rounded-lg text-white focus:outline-none focus:border-blue-500 transition-colors" />
+                <label class="block text-gray-400 text-xs font-mono mb-2" style="font-family: 'JetBrains Mono', monospace;">BUILDING STRUCTURAL PROFILE / LOCATION AREA</label>
+                <input type="text" required placeholder="e.g. 5-Floor Apartment Complex, Mohali" class="w-full bg-[#0d1117] border border-[#1e2530] p-4 rounded-lg text-white focus:outline-none focus:border-blue-500 transition-colors placeholder-zinc-700" />
             </div>
             <div>
-                <label class="block text-gray-400 text-xs font-mono mb-2" style="font-family: 'JetBrains Mono', monospace;">TARGET CONFIGURATION</label>
+                <label class="block text-gray-400 text-xs font-mono mb-2" style="font-family: 'JetBrains Mono', monospace;">TARGET DEPLOYMENT ARCHITECTURE</label>
                 <select class="w-full bg-[#0d1117] border border-[#1e2530] p-4 rounded-lg text-white focus:outline-none focus:border-blue-500 transition-colors">
                     <option>Passenger Mobility Elevator System</option>
                     <option>Architectural Panoramic Capsule Elevator</option>
                 </select>
             </div>
-            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-lg font-bold transition-colors text-sm uppercase tracking-wider mt-4">Submit Enquiry Request →</button>
+            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-lg font-bold transition-colors text-sm uppercase tracking-wider mt-4 cursor-pointer">Submit Engineering Consultation Request →</button>
         </form>
 
-        <div class="mt-12 text-center">
-            <a href="https://wa.me/919999999999?text=Hello%20VectraGlide..." target="_blank" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-6 py-3 rounded-full text-xs uppercase tracking-wider transition-all shadow-lg">
+        <div class="mt-12 text-center border-t border-white/5 pt-8">
+            <a href="https://wa.me/919999999999?text=Hello%20VectraGlide%20Team..." target="_blank" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-6 py-3 rounded-full text-xs uppercase tracking-wider transition-all shadow-lg">
                 Launch Instant WhatsApp Audit →
             </a>
         </div>
